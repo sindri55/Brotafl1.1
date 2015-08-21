@@ -1,0 +1,68 @@
+//
+// Sidebar
+// --------------------------------------------------*/
+
+#_setVar(){
+	@navbar-height: 90px;
+	@navbar-links-paddingTB: 10px;
+	@navbar-links-paddingRL: 20px;
+	@navbar-font-size: 18px;
+
+	@navbar-logo-width: 115px;
+}
+
+#_media(){
+	.navbar {
+		background: @color-yellow;
+		height: @navbar-height;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+		z-index: 100;
+		overflow: hidden;
+
+		.logo {
+			// background: url('img/Logo.png');
+			// background-size: cover;
+			float: left;
+			opacity: 1;
+
+			img {
+				width: @navbar-logo-width;
+				height: @navbar-height;
+			}
+		}
+
+		.links {
+			float: right;
+
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+
+				li {
+					float: left;
+					line-height: @navbar-height;
+
+					a {
+						padding: @navbar-links-paddingTB @navbar-links-paddingRL;
+						color: @color-black;
+						font-weight: bold;
+						font-size: @navbar-font-size;
+						&:link,
+						&:visited,
+						&:hover,
+						&:active {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}	
+	}	
+
+}
